@@ -1,3 +1,5 @@
+node_modules
+dist
+
 .npmrc
 .vscode
-node_modules
