@@ -1,7 +1,8 @@
 {
   "name": "@seedboot/mongo-connector",
-  "version": "1.0.3",
-  "main": "index.js",
+  "version": "1.0.4",
+  "main": "dist/index.js",
+  "files": ["dist"],
   "repository": "git://github.com/SeedBoot/mongo-connector.git",
   "author": "oli booty",
   "license": "MIT",
@@ -13,12 +14,12 @@
     "start": "ts-node-dev --respawn src/index.ts",
     "prepublishOnly": "yarn tsc"
   },
-  "dependencies": {
-    "mongodb": "^3.3.3"
-  },
   "devDependencies": {
     "@types/mongodb": "^3.3.6",
     "ts-node-dev": "^1.0.0-pre.43",
     "typescript": "^3.6.4"
+  },
+  "peerDependencies": {
+    "mongodb": "^3.3.3"
   }
 }
