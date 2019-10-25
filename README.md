@@ -48,4 +48,24 @@ export default async ({ database }: App): Promise<express.Application> => {
 }
 ```
 
+#### methods.ts
+```js
+export default (db: Methods): express.Router => express.Router()
+    .post(
+        '/',
+
+        async (req, res, next) => {
+            const { ops: [data] } = await db.createOne();
+            res.locals.user = data;
+            next();
+        },
+
+        (req, res) => {
+            res.send({
+                user: res.locals.user
+            })
+        }
+    )
+```
+
 _Voila!_ No more callbacks!
