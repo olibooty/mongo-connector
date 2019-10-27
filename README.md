@@ -4,6 +4,15 @@ Github-package for asynchronously connecting to your Mongo database
 ## What it is
 A simple wrapper for instantiating an async connection to Mongo in your express app.
 
+### Installation
+Ensure your `.npmrc` has `@seedboot` included as a scoped registry and then...
+
+```bash
+$ npm i @seedboot/mongo-connector
+```
+
+:metal:
+
 ### How do I use it??
 This is one severely concatenated and contrived example, but it gives you a flavour... 
 
@@ -69,3 +78,7 @@ export default (db: Methods): express.Router => express.Router()
 ```
 
 _Voila!_ No more callbacks!
+
+### Todo
+- [ ] Write tests
+- [ ] Add injectable error handling/ logger
