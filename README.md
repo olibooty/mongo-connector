@@ -4,6 +4,12 @@ Github-package for asynchronously connecting to your Mongo database
 ## What it is
 A simple wrapper for instantiating an async connection to Mongo in your express app.
 
+### Motivation
+Looking through the [MongoDB documentation](https://mongodb.github.io/node-mongodb-native/3.3/quick-start/quick-start/) I felt
+at odds following the callback style when implementing it in an already async-style app. So here is a way to serve a mongo
+ connection in a small class that reduces reduce boilerplate. It operates in the same way, exposing the db methods - but is
+ now injectable into your killer app :fire:
+
 ### Installation
 Ensure your `.npmrc` has `@seedboot` included as a scoped registry and then...
 
