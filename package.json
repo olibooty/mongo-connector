@@ -14,7 +14,8 @@
   "scripts": {
     "tsc": "tsc",
     "start": "ts-node-dev --respawn src/index.ts",
-    "prepublishOnly": "yarn tsc"
+    "prepublishOnly": "yarn tsc",
+    "push": "git push && git push --follow-tags && npm publish"
   },
   "devDependencies": {
     "@types/mongodb": "^3.3.6",
